@@ -13,9 +13,9 @@ class Scramble {
 	}
 
 	setText(newText) {
-		const oldText = this.el.innerText;
+		const oldText = this.el.textContent;
 
-		// Set so the "newText is the "
+		// Set so the "newText is the message "
 
 		const length = Math.max(oldText.length, newText.length);
 		const promise = new Promise((resolve) => this.resolve = resolve);
@@ -57,9 +57,10 @@ class Scramble {
 			}
 		} 
 
-		/*let formatted_output = `<h1> ${output} </h1>`
-		this.el.innerHTML = formatted_output;*/
-		this.el.textContent = output;
+		let formatted_output = `<h1> ${output} </h1>`
+		this.el.innerHTML = formatted_output;
+		//this.el.textContent = formatted_output; //TODO: Way to have css persist w/out using unsafe innerHTML?
+		//this.el.innerText = output;
 
 		if (complete == this.queue.length) {
 			this.resolve();
@@ -82,11 +83,9 @@ console.log(texts.length)
 for (let i = 0; i < texts.length; i++) {
 	let item = texts[i];
 
-	item.setAttribute("data-original", item.textContent);
+	item.setAttribute("data-original", item.innerText); //Eventually to be the 'hidden message' that gets shown
 
 	console.log(item);
-
-	//TODO: NEED TO SAVE ORIGINAL TEXT
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {
@@ -107,7 +106,8 @@ function helloThere(obj) {
 
 	if (!textSet) {
 
-		//TODO: HAS TO START OFF OBFUSCATED THEN OMO BECOME NORMAL
+		//TODO: HAS TO START OFF OBFUSCATED THEN omo BECOME NORMAL
+		//TODO: Flickers if mouse twitched when text changes
 		/*originalText = obj.innerHTML;*/
 		const effects = new Scramble(obj);
 
