@@ -75,17 +75,31 @@ class Scramble {
 	}
 }
 
+function generateRandomText(obj) {
+	const length = obj.innerText.length;
+	const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
+	let hiddenMsg = '';
 
-// Create list of all 'terminals' on webpage to add effect to
-let texts = document.querySelectorAll("div.terminal");
+	for (let i = 0; i < length; i++) {	
+		hiddenMsg += alphabet[Math.floor(Math.random() * alphabet.length)];
+	}
+
+	console.log(hiddenMsg);
+
+	return hiddenMsg;
+}
+
+// Create list of all 'crypto' on webpage to add effect to
+let texts = document.querySelectorAll("div.crypto");
 console.log(texts.length)
 for (let i = 0; i < texts.length; i++) {
 	let item = texts[i];
 
 	item.setAttribute("data-original", item.innerText); //Eventually to be the 'hidden message' that gets shown
+	item.setAttribute("data-obfuscated", generateRandomText(item)); 
 
-	console.log(item);
+	item.innerHTML = '<h1>' + item.getAttribute("data-obfuscated") + '</h1>';
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {
@@ -97,8 +111,6 @@ for (let i = 0; i < texts.length; i++) {
 	})
 }
 
-
-let originalText = '';
 let textSet = false; // Sometimes resets originalText if flag not set
 
 function helloThere(obj) {
@@ -108,19 +120,11 @@ function helloThere(obj) {
 
 		//TODO: HAS TO START OFF OBFUSCATED THEN omo BECOME NORMAL
 		//TODO: Flickers if mouse twitched when text changes
-		/*originalText = obj.innerHTML;*/
+		
 		const effects = new Scramble(obj);
 
-		const newText = "This is a story all about how my life got flipped turned upside down"
-		effects.setText(newText);
+		effects.setText(obj.getAttribute("data-original"));
 
-
-		/*originalText = obj.innerText;
-		textSet = true;	
-		obj.innerText = ''
-		obj.innerText = 'Hello There';
-
-		obj.style.color = 'yellow';*/
 		textSet = true;
 	}
 }
@@ -137,7 +141,7 @@ function goodbyeThen(obj) {
 		obj.style.color = '#33FF00';*/
 
 		const effects = new Scramble(obj);
-		effects.setText(obj.getAttribute("data-original"));
+		effects.setText(obj.getAttribute("data-obfuscated"));
 		textSet = false;
 	}
 }
