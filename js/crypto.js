@@ -57,7 +57,7 @@ class Scramble {
 			}
 		} 
 
-		let formatted_output = `<h2> ${output} </h2>`
+		let formatted_output = `<h3> ${output} </h3>`
 		this.el.innerHTML = formatted_output;
 		//this.el.textContent = formatted_output; //TODO: Way to have css persist w/out using unsafe innerHTML?
 		//this.el.innerText = output;
@@ -81,8 +81,17 @@ function generateRandomText(obj) {
 
 	let hiddenMsg = '';
 
-	for (let i = 0; i < length; i++) {	
-		hiddenMsg += alphabet[Math.floor(Math.random() * alphabet.length)];
+	// Add characters to the message
+	for (let i = 0; i < length; i++) {
+		if (obj.innerHTML[i] == '\n') {
+			console.log("A new line!");
+			hiddenMsg += '\n';
+		} else if (obj.innerHTML[i] == ' ') {
+			hiddenMsg += ' ';
+		} else {
+			hiddenMsg += alphabet[Math.floor(Math.random() * alphabet.length)];
+		}
+		
 	}
 
 	console.log(hiddenMsg);
@@ -99,7 +108,7 @@ for (let i = 0; i < texts.length; i++) {
 	item.setAttribute("data-original", item.innerText); //Eventually to be the 'hidden message' that gets shown
 	item.setAttribute("data-obfuscated", generateRandomText(item)); 
 
-	item.innerHTML = '<h1>' + item.getAttribute("data-obfuscated") + '</h1>';
+	item.innerHTML = '<h3>' + item.getAttribute("data-obfuscated") + '</h3>';
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {
@@ -118,7 +127,6 @@ function helloThere(obj) {
 
 	if (!textSet) {
 
-		//TODO: HAS TO START OFF OBFUSCATED THEN omo BECOME NORMAL
 		//TODO: Flickers if mouse twitched when text changes
 		
 		const effects = new Scramble(obj);
@@ -126,6 +134,7 @@ function helloThere(obj) {
 		effects.setText(obj.getAttribute("data-original"));
 
 		textSet = true;
+		console.log(obj);
 	}
 }
 
