@@ -57,10 +57,8 @@ class Scramble {
 			}
 		} 
 
-		let formatted_output = `<h3> ${output} </h3>`
+		let formatted_output = `<h3> ${output} </h3>` // Very hacky way of doing
 		this.el.innerHTML = formatted_output;
-		//this.el.textContent = formatted_output; //TODO: Way to have css persist w/out using unsafe innerHTML?
-		//this.el.innerText = output;
 
 		if (complete == this.queue.length) {
 			this.resolve();
