@@ -13,32 +13,21 @@ body {
 .navbar {
 	background-color: #2B2B2B;
 	position: relative;
+	width: 100%;
 	height: 2em;
 }
 
 .nav-list {
-	/*display: inline;*/
 	position: relative;
 	padding: 0;
 	margin: 0;
-	/*line-height: 30px;*/
 	list-style-type: none;
-}
-
-
-a:link,a:visited,.nav-link {
-	color: #33FF00;
-	text-decoration: none
-}
-
-a:hover,.nav-link {
-	color: red;
 }
 
 .nav-item {
 	display: inline-block;
-	padding-left: 1em;
-	padding-top: 5px;
+	padding-left: 1.3em;
+	padding-top: 0.7em;
 
 	/*border-color: #4F4F4F;
   	border-style: solid;
@@ -46,8 +35,39 @@ a:hover,.nav-link {
     border-radius: 6px;
 	*/
 
-
+	background-color: #3A3A3A;
+	-webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
+
+.nav-item:hover {
+	background-color: #31312E;
+}
+
+.nav-link {
+	display: inline-block;
+	-webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+	-o-transform: skew(20deg);
+	transform: skew(20deg);
+	
+	padding-right: 1.3em;
+}
+
+.nav-link:link, .nav-link:visited {
+	color: #33FF00;
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	color: #229900
+}
+
 
 
 

@@ -84,7 +84,6 @@ function generateRandomText(obj) {
 	// Add characters to the message
 	for (let i = 0; i < length; i++) {
 		if (obj.innerHTML[i] == '\n') {
-			console.log("A new line!");
 			hiddenMsg += '\n';
 		} else if (obj.innerHTML[i] == ' ') {
 			hiddenMsg += ' ';
