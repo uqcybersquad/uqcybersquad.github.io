@@ -33,10 +33,11 @@ body {
 	-webkit-transform: skew(-20deg);
     -moz-transform: skew(-20deg);
 	-o-transform: skew(-20deg);
+
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-bottom-right-radius: 2px;	
 }
 
 .nav-item:hover {
@@ -61,7 +62,6 @@ body {
 }
 
 .nav-link:hover {
-	color: #229900;
 	color: red;
 }
 
@@ -69,7 +69,7 @@ body {
 .logo-div {
 	display: block;
 
-	width: 40vw;
+	width: auto;
 	height: auto;
 }
 
