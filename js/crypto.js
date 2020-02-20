@@ -57,7 +57,8 @@ class Scramble {
 			}
 		} 
 
-		let formatted_output = `<h3> ${output} </h3>` // Very hacky way of doing
+		console.log("The heading: ", this.el.getAttribute("data-heading"));
+		let formatted_output = `<${this.el.getAttribute("data-heading")}> ${output} </${this.el.getAttribute("data-heading")}>` // Very hacky way of doing
 		this.el.innerHTML = formatted_output;
 
 		if (complete == this.queue.length) {
@@ -102,10 +103,14 @@ console.log(texts.length)
 for (let i = 0; i < texts.length; i++) {
 	let item = texts[i];
 
+	console.log(item);
+	console.log("item name: ", item.firstElementChild.localName);
 	item.setAttribute("data-original", item.innerText); //Eventually to be the 'hidden message' that gets shown
 	item.setAttribute("data-obfuscated", generateRandomText(item)); 
+	item.setAttribute("data-heading", item.firstElementChild.localName);
+	console.log("Setting heading: ", item.getAttribute("data-heading"), item.firstElementChild.localName);
 
-	item.innerHTML = '<h3>' + item.getAttribute("data-obfuscated") + '</h3>';
+	item.innerHTML = '<${}>' + item.getAttribute("data-obfuscated") + '</h3>';
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {
@@ -131,6 +136,8 @@ function helloThere(obj) {
 		effects.setText(obj.getAttribute("data-original"));
 
 		textSet = true;
+
+		console.log("lastChild: ", obj.lastChild);
 		console.log(obj);
 	}
 }

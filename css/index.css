@@ -83,6 +83,16 @@ body {
 	
 }
 
+.logo-text {
+	display: block;
+
+	color: #33FF00;
+	padding-left: auto;
+	padding-right: auto;
+	text-align: center;	
+
+	font-size: 3em;
+}
 
 
 /********Main website********/
@@ -122,17 +132,18 @@ body {
   	padding-top: 0.5em;
     padding-left: 1%;
     padding-right: 1%;
-  	
-  	
+
+
     color: #33FF00;
     /*color: white; Terminal styling*/
     text-shadow: 0 0 0px #66FF00;
 }
 
 #term-1 {
-	margin-top: 3%;
-	margin-right: 3%;
-	margin-left: 3%;
+	margin-top: 5%;
+	margin-right: 10%;
+	margin-left: 10%;
 
 	height: 80vh;
+	font-size: 1em;
 }
