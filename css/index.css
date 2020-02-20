@@ -68,12 +68,15 @@ body {
 /********Logo Config*********/
 .logo-div {
 	display: block;
+
+	width: 40vw;
+	height: auto;
 }
 
 #logo-obj {
 	display: block;
 
-	max-width: 50%;
+	max-width: 90%;
 	height: auto;
 
 	margin-left: auto;
@@ -83,6 +86,7 @@ body {
 	
 }
 
+/*
 .logo-text {
 	display: block;
 
@@ -92,7 +96,7 @@ body {
 	text-align: center;	
 
 	font-size: 3em;
-}
+}*/
 
 
 /********Main website********/
