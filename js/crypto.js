@@ -110,7 +110,7 @@ for (let i = 0; i < texts.length; i++) {
 	item.setAttribute("data-heading", item.firstElementChild.localName);
 	console.log("Setting heading: ", item.getAttribute("data-heading"), item.firstElementChild.localName);
 
-	item.innerHTML = '<${}>' + item.getAttribute("data-obfuscated") + '</h3>';
+	item.innerHTML = `<${item.getAttribute("data-heading")}>` + item.getAttribute("data-obfuscated") + `</${item.getAttribute("data-heading")}>`;
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {

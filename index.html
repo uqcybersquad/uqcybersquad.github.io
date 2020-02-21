@@ -8,7 +8,9 @@
 
   <link type="text/css" rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://fonts.google.com/?category=Monospace&selection.family=Courier+Prime">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+ 
 
 </head>
 
@@ -16,12 +18,21 @@
 
 <nav class="navbar navbar-fixed-top">
   <ul class="nav-list">
-    <li class="nav-item"> <a href="index.html" class="nav-link">~</a></li>
-    <li class="nav-item"> <a href="our-work.html" class="nav-link">OUR WORK</a></li>
-    <li class="nav-item"> <a href="http://ctf.uqcloud.net" class="nav-link">CTFD</a></li>
-    <li class="nav-item"> <a href="events.html" class="nav-link">EVENTS</a></li>
-    <li class="nav-item"> <a href="contact.html" class="nav-link">CONTACT</a></li>
-    <li class="nav-item"> <a href="writeups.html" class="nav-link">WRITEUPS</a></li>
+    <!--Website navigation links-->
+    <li class="nav-item nav-norm-left" id="home-button"> <a href="index.html" class="nav-link">~</a></li>
+    <li class="nav-item nav-norm-left"> <a href="our-work.html" class="nav-link">OUR WORK</a></li>
+    <li class="nav-item nav-norm-left"> <a href="http://ctf.uqcloud.net" class="nav-link">CTFD</a></li>
+    <li class="nav-item nav-norm-left"> <a href="events.html" class="nav-link">EVENTS</a></li>
+    <li class="nav-item nav-norm-left"> <a href="contact.html" class="nav-link">CONTACT</a></li>
+    <li class="nav-item nav-norm-left"> <a href="writeups.html" class="nav-link">WRITEUPS</a></li>
+
+    <!--Social media links-->
+    <li class="nav-item-right"> 
+      <a href="https://discord.gg/6TRbC7Y">
+        <img src="/img/discord_logo.png" class="discord-logo">
+      </a>
+    </li>
+   
   </ul>
 </nav>
 
@@ -31,8 +42,9 @@
 
 <div class="left-column">
 
-  <div class="terminal crypto" id="term-1"> <!-- Add 'crypto' as class when js is fixed -->
-    <h3 class="reg-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  <div class="terminal crypto reg-text" id="term-1"> <!-- Add 'crypto' as class when js is fixed -->
+    <h2>Welcome!</h2>
+    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
   </div>
 
 </div>
