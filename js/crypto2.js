@@ -142,13 +142,13 @@ for (let i = 0; i < texts.length; i++) {
 	})
 }
 
-let textSet = false; // Sometimes resets originalText if flag not set
+let textSet = false; // Stop from continuing in loop
 
 function helloThere(obj) {
 	console.log("Hello there");
 
 	if (!textSet) {
-		//TODO: Flickers if mouse twitched when text changes
+		//TODO: Flickers if mouse sits on text while changing - more prominent in chrome than firefox
 		
 		els = obj.children;
 
