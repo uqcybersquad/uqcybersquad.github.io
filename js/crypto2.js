@@ -99,19 +99,28 @@ function generateRandomText(obj) {
 
 // Create list of all 'crypto' on webpage to add effect to
 let texts = document.querySelectorAll("div.crypto");
-console.log(texts.length)
-console.log(document.querySelectorAll("div.terminal"));
+
 for (let i = 0; i < texts.length; i++) {
-	let item = texts[i];
+    let item = texts[i];
+    let els = item.children;
 
-	console.log(item);
-	console.log("item name: ", item.firstElementChild.localName);
-	item.setAttribute("data-original", item.innerText); //Eventually to be the 'hidden message' that gets shown
-	item.setAttribute("data-obfuscated", generateRandomText(item)); 
-	item.setAttribute("data-heading", item.firstElementChild.localName);
-	console.log("Setting heading: ", item.getAttribute("data-heading"), item.firstElementChild.localName);
+    console.log("Has this mamy kids: ", els.length);
 
-	item.innerHTML = `<${item.getAttribute("data-heading")}>` + item.getAttribute("data-obfuscated") + `</${item.getAttribute("data-heading")}>`;
+    for (let j = 0; j < els.length; j++) {
+        let el = els[j];
+        item.setAttribute(`data-header-${j}`, el.localName);
+        item.setAttribute(`data-header-${j}--collections`, `class="${el.className}" id="${el.id}"`);
+
+        item.setAttribute(`data-header-${j}--original`, el.innerText);
+        item.setAttribute(`data-header-${j}--obfuscated`, generateRandomText(el));
+        
+        //item.innerHTML = `<${item.getAttribute(`data-header-${j}`)} ${item.getAttribute(`data-header-${j}--collections`)}>` + 
+            //item.getAttribute(`data-header-${j}--obfuscated`) + `</${item.getAttribute(`data-header=${j}`)}>`; Have to take outside 
+    }
+    item.setAttribute("data-header-count", els.length);
+    console.log(item);
+
+	//item.innerHTML = `<${item.getAttribute("data-heading")}>` + item.getAttribute("data-obfuscated") + `</${item.getAttribute("data-heading")}>`;
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {

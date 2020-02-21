@@ -69,10 +69,19 @@ body {
 .fb-logo {
 	position: relative;
 
-	width: 60px;
+	width: 36px;
 	height: auto;
 
-	margin-top: -10%;
+	margin-top: 14%;
+}
+
+.github-logo {
+	position: relative;
+
+	width: 40px;
+	height: auto;
+
+	margin-top: 7%;
 }
 
 .nav-item:hover {
