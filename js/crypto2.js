@@ -133,11 +133,11 @@ for (let i = 0; i < texts.length; i++) {
 	}
 
 	// Add listening for action
-	item.addEventListener("mouseover", function() {
+	item.addEventListener("mouseenter", function() {
 		helloThere(item);
 	});	
 
-	item.addEventListener("mouseout", function () {
+	item.addEventListener("mouseleave", function () {
 		goodbyeThen(item);
 	})
 }
@@ -159,7 +159,7 @@ function helloThere(obj) {
 
 		textSet = true;
 
-		console.log("After changes:")
+		console.log("After changes:");
 		console.log(obj);
 	}
 }
