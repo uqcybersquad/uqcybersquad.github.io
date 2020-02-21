@@ -57,8 +57,9 @@ class Scramble {
 			}
 		} 
 
-		console.log("The heading: ", this.el.getAttribute("data-heading"));
-		let formatted_output = `<${this.el.getAttribute("data-heading")}> ${output} </${this.el.getAttribute("data-heading")}>` // Very hacky way of doing
+		console.log("The heading: ", this.el.getAttribute("data-header-0"));
+		let formatted_output = `<${this.el.getAttribute("data-header-0")}> ${output} </${this.el.getAttribute("data-heading-0")}>` // Very hacky way of doing
+		
 		this.el.innerHTML = formatted_output;
 
 		if (complete == this.queue.length) {
@@ -106,21 +107,30 @@ for (let i = 0; i < texts.length; i++) {
 
     console.log("Has this mamy kids: ", els.length);
 
+	// Initialise meta-data about elements in crypto div
     for (let j = 0; j < els.length; j++) {
         let el = els[j];
-        item.setAttribute(`data-header-${j}`, el.localName);
-        item.setAttribute(`data-header-${j}--collections`, `class="${el.className}" id="${el.id}"`);
+		item.setAttribute(`data-header-${j}`, el.localName);
+        item.setAttribute(`data-header-${j}-collections`, `class="${el.className}" id="${el.id}"`);
 
-        item.setAttribute(`data-header-${j}--original`, el.innerText);
-        item.setAttribute(`data-header-${j}--obfuscated`, generateRandomText(el));
+        item.setAttribute(`data-header-${j}-original`, el.innerText);
+        item.setAttribute(`data-header-${j}-obfuscated`, generateRandomText(el));
         
-        //item.innerHTML = `<${item.getAttribute(`data-header-${j}`)} ${item.getAttribute(`data-header-${j}--collections`)}>` + 
-            //item.getAttribute(`data-header-${j}--obfuscated`) + `</${item.getAttribute(`data-header=${j}`)}>`; Have to take outside 
     }
     item.setAttribute("data-header-count", els.length);
-    console.log(item);
+	
+	console.log(item);
+	
+	// Set text to be obfuscated
+	for (let j = 0; j < els.length; j++) {
 
-	//item.innerHTML = `<${item.getAttribute("data-heading")}>` + item.getAttribute("data-obfuscated") + `</${item.getAttribute("data-heading")}>`;
+		els[j].textContent = item.getAttribute(`data-header-${j}-obfuscated`);
+
+		console.log("Actual class: " + els[j].className);
+		console.log("Persisting id: " + els[j].id);
+		console.log("Generated: " + `<${item.getAttribute(`data-header-${j}`)} ${item.getAttribute(`data-header-${j}-collections`)}>` + 
+			item.getAttribute(`data-header-${j}-obfuscated`) + `</${item.getAttribute(`data-header-${j}`)}>`)
+	}
 
 	// Add listening for action
 	item.addEventListener("mouseover", function() {
@@ -138,16 +148,18 @@ function helloThere(obj) {
 	console.log("Hello there");
 
 	if (!textSet) {
-
 		//TODO: Flickers if mouse twitched when text changes
 		
-		const effects = new Scramble(obj);
+		els = obj.children;
 
-		effects.setText(obj.getAttribute("data-original"));
+		for (let i = 0; i < els.length; i++) {
+			const effects = new Scramble(els[i]);
+			effects.setText(obj.getAttribute(`data-header-${i}-original`));
+		}
 
 		textSet = true;
 
-		console.log("lastChild: ", obj.lastChild);
+		console.log("After changes:")
 		console.log(obj);
 	}
 }
@@ -155,16 +167,15 @@ function helloThere(obj) {
 function goodbyeThen(obj) {
 	console.log("Goodbye then");
 
-	if (textSet) {
-		/*obj.innerHTML = '';
-		obj.innerHTML = originalText;
+	if (textSet) {	
 
-		originalText = '';
+		els = obj.children;
 
-		obj.style.color = '#33FF00';*/
+		for (let i = 0; i < els.length; i++) {
+			const effects = new Scramble(els[i]);
+			effects.setText(obj.getAttribute(`data-header-${i}-obfuscated`));
+		}
 
-		const effects = new Scramble(obj);
-		effects.setText(obj.getAttribute("data-obfuscated"));
 		textSet = false;
 	}
 }
