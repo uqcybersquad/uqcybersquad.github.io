@@ -88,7 +88,13 @@ function generateRandomText(obj) {
 		} else if (obj.innerHTML[i] == ' ') {
 			hiddenMsg += ' ';
 		} else {
-			hiddenMsg += alphabet[Math.floor(Math.random() * alphabet.length)];
+			let newLetter = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
+			/*if (obj.innerHTML[i] != obj.innerHTML[i].toUpperCase()) {
+				hiddenMsg += newLetter.toUpperCase();
+			} else {
+				hiddenMsg += newLetter;
+			}*/
+			hiddenMsg += newLetter;
 		}
 		
 	}

@@ -202,6 +202,11 @@ body {
 	height: 80vh;
 }
 
-#paragraph {
-	font-size: 0.1em;
+.term-header {
+	padding-bottom: 0.8%;
+}
+
+.term-text {
+	padding-bottom: 1.5%;
+	font-weight: lighter;
 }
