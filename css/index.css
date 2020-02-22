@@ -1,7 +1,6 @@
 * {
 margin: 0;
 padding: 0;
-
 }
 
 body {
@@ -160,6 +159,20 @@ body {
     width: 40%;
 }
 
+.title-div {
+	position: relative;
+	
+	text-align: center;
+	padding-top: 1%;
+}
+
+.title-text {
+	font-family: 'Inconsolata', monospace;
+	font-size: 4em;
+
+	color: #33FF00;
+}
+
 .terminal {
 	/*---Size formatting---*/
     position: absolute;
@@ -210,3 +223,4 @@ body {
 	padding-bottom: 1.5%;
 	font-weight: lighter;
 }
+
