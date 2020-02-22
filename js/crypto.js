@@ -57,8 +57,9 @@ class Scramble {
 			}
 		} 
 
-		console.log("The heading: ", this.el.getAttribute("data-heading"));
-		let formatted_output = `<${this.el.getAttribute("data-heading")}> ${output} </${this.el.getAttribute("data-heading")}>` // Very hacky way of doing
+		console.log("The heading: ", this.el.getAttribute("data-header-0"));
+		let formatted_output = `<${this.el.getAttribute("data-header-0")}> ${output} </${this.el.getAttribute("data-heading-0")}>` // Very hacky way of doing
+		
 		this.el.innerHTML = formatted_output;
 
 		if (complete == this.queue.length) {
@@ -87,7 +88,13 @@ function generateRandomText(obj) {
 		} else if (obj.innerHTML[i] == ' ') {
 			hiddenMsg += ' ';
 		} else {
-			hiddenMsg += alphabet[Math.floor(Math.random() * alphabet.length)];
+			let newLetter = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
+			/*if (obj.innerHTML[i] != obj.innerHTML[i].toUpperCase()) {
+				hiddenMsg += newLetter.toUpperCase();
+			} else {
+				hiddenMsg += newLetter;
+			}*/
+			hiddenMsg += newLetter;
 		}
 		
 	}
@@ -99,46 +106,65 @@ function generateRandomText(obj) {
 
 // Create list of all 'crypto' on webpage to add effect to
 let texts = document.querySelectorAll("div.crypto");
-console.log(texts.length)
-console.log(document.querySelectorAll("div.terminal"));
+
 for (let i = 0; i < texts.length; i++) {
-	let item = texts[i];
+    let item = texts[i];
+    let els = item.children;
 
+    console.log("Has this mamy kids: ", els.length);
+
+	// Initialise meta-data about elements in crypto div
+    for (let j = 0; j < els.length; j++) {
+        let el = els[j];
+		item.setAttribute(`data-header-${j}`, el.localName);
+        item.setAttribute(`data-header-${j}-collections`, `class="${el.className}" id="${el.id}"`);
+
+        item.setAttribute(`data-header-${j}-original`, el.innerText);
+        item.setAttribute(`data-header-${j}-obfuscated`, generateRandomText(el));
+        
+    }
+    item.setAttribute("data-header-count", els.length);
+	
 	console.log(item);
-	console.log("item name: ", item.firstElementChild.localName);
-	item.setAttribute("data-original", item.innerText); //Eventually to be the 'hidden message' that gets shown
-	item.setAttribute("data-obfuscated", generateRandomText(item)); 
-	item.setAttribute("data-heading", item.firstElementChild.localName);
-	console.log("Setting heading: ", item.getAttribute("data-heading"), item.firstElementChild.localName);
+	
+	// Set text to be obfuscated
+	for (let j = 0; j < els.length; j++) {
 
-	item.innerHTML = `<${item.getAttribute("data-heading")}>` + item.getAttribute("data-obfuscated") + `</${item.getAttribute("data-heading")}>`;
+		els[j].textContent = item.getAttribute(`data-header-${j}-obfuscated`);
+
+		console.log("Actual class: " + els[j].className);
+		console.log("Persisting id: " + els[j].id);
+		console.log("Generated: " + `<${item.getAttribute(`data-header-${j}`)} ${item.getAttribute(`data-header-${j}-collections`)}>` + 
+			item.getAttribute(`data-header-${j}-obfuscated`) + `</${item.getAttribute(`data-header-${j}`)}>`)
+	}
 
 	// Add listening for action
-	item.addEventListener("mouseover", function() {
+	item.addEventListener("mouseenter", function() {
 		helloThere(item);
 	});	
 
-	item.addEventListener("mouseout", function () {
+	item.addEventListener("mouseleave", function () {
 		goodbyeThen(item);
 	})
 }
 
-let textSet = false; // Sometimes resets originalText if flag not set
+let textSet = false; // Stop from continuing in loop
 
 function helloThere(obj) {
 	console.log("Hello there");
 
 	if (!textSet) {
-
-		//TODO: Flickers if mouse twitched when text changes
 		
-		const effects = new Scramble(obj);
+		els = obj.children;
 
-		effects.setText(obj.getAttribute("data-original"));
+		for (let i = 0; i < els.length; i++) {
+			const effects = new Scramble(els[i]);
+			effects.setText(obj.getAttribute(`data-header-${i}-original`));
+		}
 
 		textSet = true;
 
-		console.log("lastChild: ", obj.lastChild);
+		console.log("After changes:");
 		console.log(obj);
 	}
 }
@@ -146,16 +172,15 @@ function helloThere(obj) {
 function goodbyeThen(obj) {
 	console.log("Goodbye then");
 
-	if (textSet) {
-		/*obj.innerHTML = '';
-		obj.innerHTML = originalText;
+	if (textSet) {	
 
-		originalText = '';
+		els = obj.children;
 
-		obj.style.color = '#33FF00';*/
+		for (let i = 0; i < els.length; i++) {
+			const effects = new Scramble(els[i]);
+			effects.setText(obj.getAttribute(`data-header-${i}-obfuscated`));
+		}
 
-		const effects = new Scramble(obj);
-		effects.setText(obj.getAttribute("data-obfuscated"));
 		textSet = false;
 	}
 }
