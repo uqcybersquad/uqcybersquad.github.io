@@ -154,7 +154,6 @@ function helloThere(obj) {
 	console.log("Hello there");
 
 	if (!textSet) {
-		//TODO: Flickers if mouse sits on text while changing - more prominent in chrome than firefox
 		
 		els = obj.children;
 
