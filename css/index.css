@@ -84,8 +84,12 @@ body {
 	margin-top: 7%;
 }
 
-.nav-item:hover {
-	background-color: #31312E;
+.nav-item:hover{
+	background-color: #31312E; 
+}
+
+.nav-item:hover .nav-link {
+	color: red;
 }
 
 .nav-link {
@@ -106,7 +110,7 @@ body {
 	color: #33FF00;
 	text-decoration: none;
 }
-
+/*&
 .nav-link:hover {
 	color: red;
 }
