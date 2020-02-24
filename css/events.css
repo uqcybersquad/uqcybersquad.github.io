@@ -66,3 +66,7 @@
 	background-color: #31312E;
 
 }
+
+.content-item:hover .nav-link {
+	color: red;
+}
