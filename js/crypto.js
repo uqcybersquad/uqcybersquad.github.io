@@ -158,7 +158,7 @@ function helloThere(obj) {
 
 		for (let i = 0; i < els.length; i++) {
 			const effects = new Scramble(els[i]);
-			finished = effects.setText(obj.getAttribute(`data-header-${i}-original`));
+			effects.setText(obj.getAttribute(`data-header-${i}-original`));
 		}
 
 		textSet = true;
