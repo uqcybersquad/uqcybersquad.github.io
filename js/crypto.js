@@ -15,8 +15,6 @@ class Scramble {
 	setText(newText) {
 		const oldText = this.el.textContent;
 
-		// Set so the "newText is the message "
-
 		const length = Math.max(oldText.length, newText.length);
 		const promise = new Promise((resolve) => this.resolve = resolve);
 
@@ -32,6 +30,7 @@ class Scramble {
 		cancelAnimationFrame(this.frameRequest);
 		this.frame = 0;
 		this.update();
+
 
 		return promise;
 	}
@@ -142,10 +141,10 @@ for (let i = 0; i < texts.length; i++) {
 	item.addEventListener("mouseenter", function() {
 		helloThere(item);
 	});	
-
+	/* Too annoying
 	item.addEventListener("mouseleave", function () {
-		goodbyeThen(item);
-	})
+		goodbyeThen(item); 
+	})*/
 }
 
 let textSet = false; // Stop from continuing in loop
@@ -159,7 +158,7 @@ function helloThere(obj) {
 
 		for (let i = 0; i < els.length; i++) {
 			const effects = new Scramble(els[i]);
-			effects.setText(obj.getAttribute(`data-header-${i}-original`));
+			finished = effects.setText(obj.getAttribute(`data-header-${i}-original`));
 		}
 
 		textSet = true;
@@ -168,6 +167,8 @@ function helloThere(obj) {
 		console.log(obj);
 	}
 }
+
+/* Mouseout event too annoying
 
 function goodbyeThen(obj) {
 	console.log("Goodbye then");
@@ -183,4 +184,4 @@ function goodbyeThen(obj) {
 
 		textSet = false;
 	}
-}
+}*/
