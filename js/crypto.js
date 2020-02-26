@@ -137,22 +137,28 @@ for (let i = 0; i < texts.length; i++) {
 			item.getAttribute(`data-header-${j}-obfuscated`) + `</${item.getAttribute(`data-header-${j}`)}>`)
 	}
 
-	// Add listening for action
+	// Add listening for action 
+	/*
 	item.addEventListener("mouseenter", function() {
 		helloThere(item);
-	});	
+	});	*/
+
+	window.setTimeout(function() {helloThere(item);}, 1300);
 	/* Too annoying
 	item.addEventListener("mouseleave", function () {
 		goodbyeThen(item); 
 	})*/
 }
 
+setTimeout(helloThere)
+
+
 let textSet = false; // Stop from continuing in loop
 
 function helloThere(obj) {
 	console.log("Hello there");
 
-	if (!textSet) {
+	//if (!textSet) {
 		
 		els = obj.children;
 
@@ -165,7 +171,7 @@ function helloThere(obj) {
 
 		console.log("After changes:");
 		console.log(obj);
-	}
+	//}
 }
 
 /* Mouseout event too annoying
