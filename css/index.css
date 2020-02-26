@@ -84,6 +84,16 @@ body {
 	margin-top: 7%;
 }
 
+
+.linkedin-logo {
+	position: relative;
+
+	width: 40px;
+	height: auto;
+
+	margin-top: 7%;
+}
+
 .nav-item:hover{
 	background-color: #31312E; 
 }
