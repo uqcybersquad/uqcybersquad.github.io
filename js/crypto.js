@@ -137,13 +137,15 @@ for (let i = 0; i < texts.length; i++) {
 			item.getAttribute(`data-header-${j}-obfuscated`) + `</${item.getAttribute(`data-header-${j}`)}>`)
 	}
 
+	this.setTimeout(helloThere, 1300, item);
+
 	// Add listening for action 
 	/*
 	item.addEventListener("mouseenter", function() {
 		helloThere(item);
 	});	*/
 
-	window.setTimeout(function() {helloThere(item);}, 1300);
+	
 	/* Too annoying
 	item.addEventListener("mouseleave", function () {
 		goodbyeThen(item); 
