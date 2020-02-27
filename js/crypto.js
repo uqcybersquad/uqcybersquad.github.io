@@ -152,8 +152,6 @@ for (let i = 0; i < texts.length; i++) {
 	})*/
 }
 
-setTimeout(helloThere)
-
 
 let textSet = false; // Stop from continuing in loop
 
