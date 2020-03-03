@@ -3,3 +3,8 @@
 1. Add a not-found page
 2. Writeups page (separate domain?)
 
+
+
+STYLE
+
+1. Change active links to be different colour (inactive slides e.g.)
