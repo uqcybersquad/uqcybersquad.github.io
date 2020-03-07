@@ -5,8 +5,6 @@
 
 
 
-<<<<<<< HEAD
-=======================================================================
 
 1. Sponsorship page
 	- Design it
@@ -18,4 +16,3 @@
 STYLE
 
 1. Change active links to be different colour (inactive slides e.g.)
->>>>>>> c5f35bd2863d1dbd9386647f8f31c684edfa5f24
