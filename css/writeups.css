@@ -1,0 +1,95 @@
+.writeup {
+    position: relative;
+    display: inline-block;
+
+    width: 55vw;
+
+    padding-left: 6%;
+    padding-top: 4%;
+}
+
+
+
+/* Fancy transition stuff*/
+.container {
+    position: relative;
+    padding-left: 0.3vw;
+
+    border-left: 0px solid red;
+
+    transition: border-left-width 0.1s ease-in-out;     
+}
+
+.container:hover {
+    border-left: 3px solid red;
+}
+
+
+
+.time-text {
+    position: relative;
+
+    font-family: 'Inconsolata', monospace;
+    font-weight: lighter;
+
+    padding-top: 0.4%;
+    padding-bottom: 1%;
+}
+
+
+.blog-link {
+    color: red;
+    text-decoration: underline;
+    
+    font-family: 'Inconsolata', monospace;
+    font-weight: bolder;
+    font-size: 1.6em;
+    
+}
+
+.blog-link:link, .blog-link:visited {
+    text-decoration: underline;
+}
+
+.blog-link:hover {
+    text-decoration: none;
+}
+
+
+
+/* Image styling*/
+.img-wrap {
+    position: absolute;
+    display: inline-block;
+}
+
+.writeup-img {
+    position: relative;
+
+    height: auto;
+
+    border-style: solid;
+    border-color: #141414;
+    border-width: 10px;
+    border-radius: 4px;
+
+    transition: border-color 0.3s ease-in-out;
+}
+
+.writeup-img:hover {
+    border-color: #1A1A1A;
+}
+
+#shearwater {
+    position: relative;
+    width: 40%;
+
+    margin-top: 8vh;  
+}
+
+#gcc2020 {
+    position: relative;
+    width: 40%;
+
+    margin-top: 9vh;
+}
