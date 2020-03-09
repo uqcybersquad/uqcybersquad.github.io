@@ -2,28 +2,46 @@
     position: relative;
     display: inline-block;
 
-    width: 55vw;
+    width: 56vw;
 
     padding-left: 6%;
     padding-top: 4%;
+
+    
 }
 
+.writeup-term {
 
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 7px;
 
-/* Fancy transition stuff*/
+    /* Terminal Styling*/
+    justify-content: center;
+    align-self: center;
+  	border-color: #33FF00;
+  	border-style: solid;
+  	border-width: 2%;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #66FF00;
+
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-left-width 0.3s ease-in-out;
+    
+    background-color: #141414; 
+}
+
+.writeup-term:hover {
+    border-color: red;
+    box-shadow: 0 0 3px red;
+
+    border-left: 10px solid red;
+}
+
+/* Necessary for formatting*/
 .container {
     position: relative;
     padding-left: 0.3vw;
-
-    border-left: 0px solid red;
-
-    transition: border-left-width 0.1s ease-in-out;     
 }
-
-.container:hover {
-    border-left: 3px solid red;
-}
-
 
 
 .time-text {
@@ -61,6 +79,8 @@
 .img-wrap {
     position: absolute;
     display: inline-block;
+
+    margin-left: 1vw;
 }
 
 .writeup-img {
@@ -84,12 +104,12 @@
     position: relative;
     width: 40%;
 
-    margin-top: 8vh;  
+    margin-top: 9vh;  
 }
 
 #gcc2020 {
     position: relative;
     width: 40%;
 
-    margin-top: 9vh;
+    margin-top: 8vh;
 }
