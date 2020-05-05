@@ -21,6 +21,10 @@
     margin-right: auto;
 }
 
+#no-link {
+	color: red;
+}
+
 .event-single {
 	position: relative;
 	height: auto;
