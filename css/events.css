@@ -18,7 +18,9 @@
 
     margin-top: 2%;
     margin-left: 5vw;
-    margin-right: auto;
+	margin-right: auto;
+	
+	overflow-y:scroll;
 }
 
 #no-link {
