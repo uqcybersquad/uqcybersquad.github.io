@@ -133,14 +133,25 @@ body {
 #logo-obj {
 	display: block;
 
-	max-width: 90%;
+	max-width: 50%;
 	height: auto;
 
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10vh;
+	margin-top: 5vh;
 	margin-bottom: auto;
 	
+}
+
+#discord-qr {
+	display: block;
+
+	max-width: 50%;
+	height: auto;
+
+	margin-left: 	auto;
+	margin-right: 	auto;
+	margin-top: 	5vh;
 }
 
 /********Main website********/
@@ -210,6 +221,18 @@ body {
 
 	min-height: 80vh;
 	height: auto;
+}
+
+#qr-logo {
+	/*---Terminal font styling---*/
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	font-size: 2em;
+	
+	color: red;
+	
+	text-align: center;
+	margin-bottom: -0.5em;
 }
 
 .term-header {
