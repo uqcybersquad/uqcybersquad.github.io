@@ -138,12 +138,12 @@ body {
 #logo-obj {
 	display: block;
 
-	max-width: 50%;
+	max-width: 70%;
 	height: auto;
 
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5vh;
+	margin-top: 6vh;
 	margin-bottom: auto;
 	
 }
@@ -156,7 +156,7 @@ body {
 
 	margin-left: 	auto;
 	margin-right: 	auto;
-	margin-top: 	5vh;
+	margin-top: 	7vh;
 }
 
 /********Main website********/
@@ -237,6 +237,7 @@ body {
 	color: var(--purple);
 	
 	text-align: center;
+	margin-top:  1em;
 	margin-bottom: -0.5em;
 }
 
