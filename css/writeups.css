@@ -23,7 +23,7 @@
   	border-style: solid;
   	border-width: 2%;
     border-radius: 4px;
-    box-shadow: 0 0 3px #66FF00;
+    box-shadow: 0 0 3px var(--purpleShadow);
 
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-left-width 0.3s ease-in-out;
     
@@ -31,10 +31,10 @@
 }
 
 .writeup-term:hover {
-    border-color: white;
-    box-shadow: 0 0 3px white;
+    border-color: var(--purpleHover);
+    box-shadow: 0 0 3px var(--purpleShadow);
 
-    border-left: 10px solid white;
+    border-left: 10px solid var(--purpleHover);
 }
 
 /* Necessary for formatting*/
