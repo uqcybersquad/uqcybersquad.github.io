@@ -1,10 +1,15 @@
+:root {
+  --purple: #7000e0;
+}
+
+
 * {
 margin: 0;
 padding: 0;
 }
 
 body {
-	background-color: #1A1A1A;
+	background-color: black;
 }
 
 /* TODO: This can be cleaned up. A lot...*/
@@ -98,8 +103,8 @@ body {
 	background-color: #31312E; 
 }
 
-.nav-item:hover .nav-link {
-	color: red;
+.nav-item:hover .nav-link:hover {
+	color: var(--purple);
 }
 
 .nav-link {
@@ -117,7 +122,7 @@ body {
 }
 
 .nav-link:link, .nav-link:visited {
-	color: #33FF00;
+	color: white;
 	text-decoration: none;
 }
 
@@ -178,7 +183,7 @@ body {
 	font-family: 'Inconsolata', monospace;
 	font-size: 4em;
 
-	color: #33FF00;
+	color: white;
 }
 
 .terminal {
@@ -192,7 +197,7 @@ body {
   	/*---Box styling---*/
   	justify-content: center;
     align-self: center;
-  	border-color: #33FF00;
+  	border-color: var(--purple);
   	border-style: solid;
   	border-width: 2%;
     border-radius: 4px;
@@ -207,7 +212,7 @@ body {
 	font-weight: lighter;
 	font-size: 1em;
 	
-	color: #33FF00;
+	color: white;
 	
 	padding-top: 0.5em;
     padding-left: 1%;
@@ -229,7 +234,7 @@ body {
 	font-weight: bold;
 	font-size: 2em;
 	
-	color: red;
+	color: var(--purple);
 	
 	text-align: center;
 	margin-bottom: -0.5em;
@@ -237,7 +242,7 @@ body {
 
 .term-header {
 	padding-bottom: 0.8%;
-	color: red;
+	color: var(--purple);
 }
 
 .term-text {
@@ -247,15 +252,15 @@ body {
 }
 
 .term-htext {
-	color: #33FF00;
+	color: white;
 }
 
 .term-htext:hover {
-	color: red;
+	color: var(--purple);
 }
 
 .term-tild {
-	color: red;
+	color: var(--purple);
 	display: inline;
 }
 
