@@ -9,6 +9,19 @@
 
     text-align: center;
 }
+#events-head-term {
+    position: relative;
+    width: 38.5vw;
+	height: 10vh;
+	
+	line-height: 1.5;
+
+    margin-top: 1%;
+    margin-left: auto;
+	margin-right: auto;
+
+    text-align: center;
+}
 
 #events-term {
     position: relative;
@@ -24,7 +37,7 @@
 }
 
 #no-link {
-	color: red;
+	color: var(--noLink);
 }
 
 .event-single {
@@ -74,5 +87,5 @@
 }
 
 .content-item:hover .nav-link {
-	color: red;
+	color: var(--purpleHover);
 }

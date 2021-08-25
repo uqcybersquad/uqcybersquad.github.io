@@ -1,5 +1,8 @@
 :root {
-  --purple: #7000e0;
+  --purple: #5e17eb;
+  --purpleShadow: #6626e7;
+  --purpleHover: #8D1AF8;
+  --noLink: #F327FA;
 }
 
 
@@ -201,7 +204,7 @@ body {
   	border-style: solid;
   	border-width: 2%;
     border-radius: 4px;
-    box-shadow: 0 0 3px #66FF00;
+    box-shadow: 0 0 3px var(--purpleShadow);
 
 	background-color: #141414;  
 }
@@ -257,7 +260,7 @@ body {
 }
 
 .term-htext:hover {
-	color: var(--purple);
+	color: var(--purpleHover);
 }
 
 .term-tild {
