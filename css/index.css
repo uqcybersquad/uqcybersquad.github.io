@@ -27,6 +27,13 @@ body {
 	height: 3em;
 }
 
+/* mobile */
+@media screen and (max-width: 800px) {
+	.navbar {
+		font-size: 18px;
+	}
+}
+
 .nav-list {
 	position: relative;
 	list-style-type: none;
