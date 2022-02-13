@@ -29,38 +29,15 @@
     <!--Website navigation links-->
     <li class="nav-item nav-norm-left" id="home-button"> <a href="index.html" class="nav-link">~</a></li>
     <li class="nav-item nav-norm-left"> <a href="work.html" class="nav-link">OUR WORK</a></li>
-    <li class="nav-item nav-norm-left"> <a href="https://ctf.uqcloud.net" class="nav-link" target="_blank">CTFD</a></li>
-    <li class="nav-item nav-norm-left"> <a href="events.html" class="nav-link">EVENTS</a></li>
+    
+    <li class="nav-item nav-norm-left"> <a href="events.html" class="nav-link">PAST EVENTS</a></li>
     <li class="nav-item nav-norm-left"> <a href="contact.html" class="nav-link">CONTACT</a></li>
-    <li class="nav-item nav-norm-left"> <a href="writeups.html" class="nav-link">WRITEUPS</a></li>
-
     <!--TODO: Have home link be in center of navbar-->
     <!--flag{w0ah_n1c3_f1nd}-->
     <!--Social media links-->
+
     
-    <li class="nav-item-right">
-      <a href="https://linkedin.com/company/uq-cyber-squad" target="_blank">
-        <img src="img/linkedin_logo.png" class="linkedin-logo">
-      </a>
-    </li>
-
-    <li class="nav-item-right">
-      <a href="https://www.facebook.com/uqcybersquad/" target="_blank">
-        <img src="img/fb_logo.png" class="fb-logo">
-      </a>
-    </li>
-
-    <li class="nav-item-right">
-      <a href="https://github.com/uqcybersquad" target="_blank">
-        <img src="img/github_logo.png" class="github-logo">
-      </a>
-    </li>
-
-    <li class="nav-item-right"> 
-      <a href="https://discord.gg/6TRbC7Y" target="_blank">
-        <img src="img/discord_logo.png" class="discord-logo">
-      </a>
-    </li>
+    
 
     <!-- TODO: have link to embedded email? -->
 
@@ -68,44 +45,80 @@
 
 <body>
 
-<div class="left-column">
-<!-- TODO: Can we put a line break before each of the headers?? (see below) -->
-<!-- TODO: Need to fix -> the cyrpto.js script is Deleting any styling (e.g. underlining, br's, and bolding)-->
-  <div class="terminal crypto reg-text" id="term-1">
-    <h3 class="term-text">Cyber Security is one of the most prominent threats facing our modern day society. From common-place phishing attacks to widespread data breaches, its effects are widespread and deeply impactful. It's important that there exist people to help combat this ever increasing threat.</h3>
 
-    <h2 class="term-header">PURPOSE</h2>
-    <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">We are dedicated to building the best cyber security competition squad in the world... An elite band of hackers who can take on any challenge and effectively find, exploit and mitigate vulnerabilities in today's ever evolving cyber space.</h3>
 
-    <h2 class="term-header">SCHEDULE</h2>
-    <h3 class="term-text term-tild">~$ </h3><h3 class="term-text"><b>Due to COVID-19 we will be announcing changes to events on our Discord channel. </b>In more normal times we host weekly get togethers on <u>Thursday nights</u> from 6.00pm in GP South, room 78-343. Come for technical talks, practice challenges, and a great community.</h3>
+    <div class="logos-area">
+      <!-- right-justified when desktop, on top when big screen -->
+      <div class="logo-div">
+        <img src="img/logo.png" id="logo-obj">
+      </div>
+    </div>
 
-    <h2 class="term-header">NEED TO KNOW?</h2>
-    <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">Nothing! We have a range of experience levels, from the never-touched-a-terminal, to the OSCP qualified, and beyond. We learn together, practice together, and compete together - collaboration is key to growth.</h3>
+      
+
+
+
+    <div class="text-blob">
+      <p id="qr-logo"><a href="https://discord.gg/6TRbC7Y" style="color: white">>> JOIN OUR DISCORD</a></p>
+
+    <!-- TODO: Can we put a line break before each of the headers?? (see below) -->
+    <!-- TODO: Need to fix -> the cyrpto.js script is Deleting any styling (e.g. underlining, br's, and bolding)-->
+      <div class="terminal crypto reg-text" id="term-1">
+        <h3 class="term-text">Cyber Security is one of the most prominent threats facing our modern day society. From common-place phishing attacks to widespread data breaches, its effects are widespread and deeply impactful. It's important that there exist people to help combat this ever increasing threat.</h3>
+
+        <h2 class="term-header">PURPOSE</h2><hr>
+
+        <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">We are dedicated to building the best cyber security competition squad in the world... An elite band of hackers who can take on any challenge and effectively find, exploit and mitigate vulnerabilities in today's ever evolving cyber space.</h3>
+        
+        <h2 class="term-header">SCHEDULE</h2><hr>
+        <h3 class="term-text term-tild">~$ </h3><h3 class="term-text"><b>Due to COVID-19 we will be announcing changes to events on our Discord channel. </b>In more normal times we host weekly get togethers on <u>Thursday nights</u> from 6.00pm in GP South, room 78-343. Come for technical talks, practice challenges, and a great community.</h3>
+        
+        <h2 class="term-header">NEED TO KNOW?</h2><hr>
+        <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">Nothing! We have a range of experience levels, from the never-touched-a-terminal, to the OSCP qualified, and beyond. We learn together, practice together, and compete together - collaboration is key to growth.</h3>
+        
+        <h2 class="term-header">MEMBERSHIP</h2><hr>
+        <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">Membership is $5. For the events, all you need to bring is yourself, your laptop and charger. Maybe all your hacking gear too.</h3>
+
+      </div>
+
+      <div class="discord-qr">
+        <img src="img/csquad_discord.png" id="discord-qr">
+      </div>
+
+
+      <div id=socials>
+
+        <a href="https://linkedin.com/company/uq-cyber-squad" target="_blank">
+          <img src="img/linkedin_logo.png" class="linkedin-logo">
+        </a>
+   
+        <a href="https://www.facebook.com/uqcybersquad/" target="_blank">
+          <img src="img/fb_logo.png" class="fb-logo">
+        </a>
+      
+        <a href="https://github.com/uqcybersquad" target="_blank">
+          <img src="img/github_logo.png" class="github-logo">
+        </a>
+     
+        <a href="https://discord.gg/6TRbC7Y" target="_blank">
+          <img src="img/discord_logo.png" class="discord-logo">
+        </a>
+      
+      </div>
+
+
+    </div>
+
+   
+
   
-    <h2 class="term-header">MEMBERSHIP</h2>
-    <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">Membership is $5. For the events, all you need to bring is yourself, your laptop and charger. Maybe all your hacking gear too. You don't have to be a member to attend the normal events.</h3>
-
-  </div>
-
-</div>
-
-<div class="right-column">
-
-  <div class="logo-div">
-    <img src="img/logo.png" id="logo-obj">
-  </div>
-
-  <div class="discord-qr">
-    <p id="qr-logo"><a href="https://discord.gg/6TRbC7Y" style="color: var(--purple)">>> JOIN OUR DISCORD</a></p>
-    <img src="img/csquad_discord.png" id="discord-qr">
-  </div>
-
-</div>
-
 
 <script src="js/crypto.js"></script>
+
+
 </body>
+
+
 
 
 

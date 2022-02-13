@@ -2,6 +2,7 @@
   --purple: #5e17eb;
   --purpleShadow: #6626e7;
   --purpleHover: #8D1AF8;
+  --purpleShallow: #873a77;
   --noLink: #F327FA;
 }
 
@@ -9,6 +10,7 @@
 * {
 margin: 0;
 padding: 0;
+font-family: 'Inconsolata', monospace;
 }
 
 body {
@@ -56,6 +58,9 @@ body {
 	padding-right: 0.6em;
 }
 
+
+
+/*
 .nav-item-right {
 	position: relative;
 	height: 2em;
@@ -63,6 +68,33 @@ body {
 
 	padding-right: 0.3%;
 }
+*/
+
+/* mobile */
+@media screen and (max-width: 800px) {
+		.nav-item-right {
+			position: relative;
+			/*position: absolute;*/
+			top: 90vh;
+			height: 2em;
+			float: right;
+
+			margin-left: 90vw;
+		}
+}
+
+/* go at the bottom of screen */
+#socials {
+	display: block;
+	position: relative;
+	/*top: 1em;*/
+	left: 35vw;
+	/*left: 2em;*/
+
+	/*bottom: 0px;*/
+	/*left: 1em;*/
+}
+
 
 .discord-logo {
 	position: relative;
@@ -77,7 +109,7 @@ body {
 .fb-logo {
 	position: relative;
 
-	width: 36px;
+	width: 38px;
 	height: auto;
 
 	margin-top: 14%;
@@ -107,7 +139,7 @@ body {
 }
 
 .nav-item:hover .nav-link:hover {
-	color: var(--purple);
+	color:  cyan;
 }
 
 .nav-link {
@@ -141,39 +173,70 @@ body {
 #logo-obj {
 	display: block;
 
-	max-width: 70%;
-	height: auto;
+	/*max-width: 70%;*/
+	height: 20vh;
 
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 6vh;
+	margin-top: 1em;
 	margin-bottom: auto;
 	
 }
 
 #discord-qr {
-	display: block;
+		display: block;
 
-	max-width: 50%;
-	height: auto;
+		max-width: 50%;
+		height: auto;
 
-	margin-left: 	auto;
-	margin-right: 	auto;
-	margin-top: 	7vh;
+		margin-left: 	auto;
+		margin-right: 	auto;
+		margin-top: 	1em;
+		text-align: center;
 }
+
+
 
 /********Main website********/
-.left-column {
-	position: absolute;
-    left: 0;
-    width: 40%;
+
+
+/* mobile-first design transition */
+
+/* was called left-column */
+/*@media screen and (min-width: 800px) {
+	.text-blob {
+	
+	display:  inline;
+	float: left;
+  left: 0;
+   width: 50%;
+	}
+}*/
+
+
+/* small screens (< 800px width)*/
+.logos-area {
+
+	display: block;
+
+	/*float:  right;*/
+	/*right: 5%;*/
+  /*width: 40%;*/
 }
 
-.right-column {
-	position: absolute;
-	right: 5%;
-    width: 40%;
+
+/* big screen view */
+/*
+@media screen and (min-width: 800px) { 
+	.logos-area {
+
+		display: inline;
+		float:  right;
+		right: 5%;
+	  width: 40%;
+	}
 }
+*/
 
 .title-div {
 	position: relative;
@@ -191,11 +254,11 @@ body {
 
 .terminal {
 	/*---Size formatting---*/
-    position: absolute;
+    
     margin-right: 4%;
     margin-left: 4%;
-	height: 30vh;
-  	width: 40vw;
+		/*height: 30vh;*/
+  	/*width: 40vw;*/
 
   	/*---Box styling---*/
   	justify-content: center;
@@ -223,7 +286,7 @@ body {
 }
 
 #term-1 {
-	margin-top: 5%;
+	margin-top: 2em;
 	margin-right: 10%;
 	margin-left: 10%;
 
@@ -245,6 +308,7 @@ body {
 }
 
 .term-header {
+	margin-top: 1em;
 	padding-bottom: 0.8%;
 	color: var(--purple);
 }
