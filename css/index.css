@@ -314,6 +314,10 @@ body {
 	margin-bottom: -0.5em;
 }
 
+#qr-logo a {
+	color:cyan;
+}
+
 .term-header {
 	margin-top: 1em;
 	padding-bottom: 0.8%;
