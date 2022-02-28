@@ -147,7 +147,7 @@ body {
 }
 
 .nav-item:hover .nav-link:hover {
-	color:  cyan;
+	color:  var(--blueHighlight);
 }
 
 .nav-link {
