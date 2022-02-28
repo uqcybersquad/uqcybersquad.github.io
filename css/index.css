@@ -3,6 +3,7 @@
   --purpleShadow: #6626e7;
   --purpleHover: #8D1AF8;
   --purpleShallow: #873a77;
+  --blueHighlight: #0AD6FF;
   --noLink: #F327FA;
 }
 
@@ -52,7 +53,7 @@ body {
 	border-top-right-radius: 8px;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
-	
+
 	margin-left: 0.2em;
 	margin-top: 0.5em;
 }
@@ -110,7 +111,7 @@ body {
 	height: auto;
 
 	margin-top: 10%;
-	
+
 }
 
 .fb-logo {
@@ -142,11 +143,11 @@ body {
 }
 
 .nav-item:hover{
-	background-color: #31312E; 
+	background-color: #31312E;
 }
 
 .nav-item:hover .nav-link:hover {
-	color:  cyan;
+	color:  var(--blueHighlight);
 }
 
 .nav-link {
@@ -157,7 +158,7 @@ body {
 	-webkit-transform: skew(20deg);
     -moz-transform: skew(20deg);
 	-o-transform: skew(20deg);
-	
+
 	padding-left: 0.5em;
 	padding-top: 0.3em;
 	padding-right: 0.5em;
@@ -187,7 +188,7 @@ body {
 	margin-right: auto;
 	margin-top: 1em;
 	margin-bottom: auto;
-	
+
 }
 
 #discord-qr {
@@ -212,7 +213,7 @@ body {
 /* was called left-column */
 /*@media screen and (min-width: 800px) {
 	.text-blob {
-	
+
 	display:  inline;
 	float: left;
   left: 0;
@@ -234,7 +235,7 @@ body {
 
 /* big screen view */
 /*
-@media screen and (min-width: 800px) { 
+@media screen and (min-width: 800px) {
 	.logos-area {
 
 		display: inline;
@@ -247,7 +248,7 @@ body {
 
 .title-div {
 	position: relative;
-	
+
 	text-align: center;
 	padding-top: 1%;
 }
@@ -261,7 +262,7 @@ body {
 
 .terminal {
 	/*---Size formatting---*/
-    
+
     margin-right: 4%;
     margin-left: 4%;
 		/*height: 30vh;*/
@@ -276,7 +277,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 0 3px var(--purpleShadow);
 
-	background-color: #141414;  
+	background-color: #141414;
 }
 
 .reg-text {
@@ -284,9 +285,9 @@ body {
 	font-family: 'Inconsolata', monospace;
 	font-weight: lighter;
 	font-size: 1em;
-	
+
 	color: white;
-	
+
 	padding-top: 0.5em;
     padding-left: 1%;
     padding-right: 1%;
@@ -306,22 +307,26 @@ body {
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
 	font-size: 2em;
-	
+
 	color: var(--purple);
-	
+
 	text-align: center;
 	margin-top:  1em;
 	margin-bottom: -0.5em;
 }
 
 #qr-logo a {
-	color:cyan;
+	color: var(--blueHighlight);
 }
 
 .term-header {
 	margin-top: 1em;
+}
+
+.term-header-title {
+  display: inline;
+	color: var(--blueHighlight);
 	padding-bottom: 0.8%;
-	color: var(--purple);
 }
 
 .term-text {
@@ -343,3 +348,11 @@ body {
 	display: inline;
 }
 
+.term-dot-slash {
+  color: var(--purple);
+  display: inline;
+}
+
+.padded-hr {
+  margin-top: 1%;
+}
