@@ -150,6 +150,10 @@ body {
 	color:  var(--blueHighlight);
 }
 
+a {
+  color:  var(--blueHighlight);	
+}
+
 .nav-link {
 	font-family: 'Roboto Mono', monospace;
 
