@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<meta charset="utf-8" />
-<html lang=en>
+<html lang=en-AU>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161842274-1"></script> -->
-  <!-- <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'UA-161842274-1');
-  </script> -->
-
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> UQ Cyber Squad </title>
+  <meta name="description" content="UQ Cyber Squad, or as some like to call us; The UQ Hacking Club. We’re a band of proud Cyber Security enthusiasts who want to solve challenges and learn a thing or two. Plus have a lot of fun along the way!" />
+  <meta property="og:title" content="The University Of Queensland Cyber Squad">
+  <meta property="og:image" content="https://uqcybersquad.github.io/img/logo.png">
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -41,124 +36,113 @@
       }
     }
   </script>
-<!--   
+  <!--   
   <link type="text/css" rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://fonts.google.com/?category=Monospace&selection.family=Courier+Prime">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
 
 </head>
 
-
-<body class="bg-black flex flex-col">
+<body class="bg-black flex flex-col subpixel-antialiased">
 
   <nav class="md:bg-navBackground select-none w-screen mb-8 md:mb-0">
     <ul class="flex md:hidden flex flex-row text-white font-mono">
-      <a href="index.html" class="flex-grow px-5 py-3 font-medium"><li ><span class="text-purple font-sans font-bold">./</span>UQ CYBER SQUAD</li></a>
-      <li class="hover:text-blueHighlight px-4 mx-4 py-1 my-2 bg-navButton hover:bg-navHover rounded-lg" onclick="document.getElementById('nav-links').classList.toggle('hidden')">≡</li>
+      <a href="index.html" class="flex-grow px-5 py-3 font-medium">
+        <li><span class="text-purple font-sans font-extrabold">./</span>UQ CYBER SQUAD</li>
+      </a>
+      <li class="hover:text-blueHighlight px-4 mx-4 py-1 my-2 bg-navButton hover:bg-navHover rounded-lg"
+        onclick="document.getElementById('nav-links').classList.toggle('hidden')">≡</li>
     </ul>
     <ul class="hidden flex md:flex md:flex-row flex-col" id="nav-links">
       <!--Website navigation links-->
-      <a href="index.html" class="hidden md:inline px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight"><li class="md:skew-x-12">~</li></a>
-      <a href="work.html" class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight"><li class="md:skew-x-12 ">OUR WORK</li></a>
-      <a href="events.html" class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight"><li class="md:skew-x-12 ">PAST EVENTS</li></a>
-      <a href="writeups.html" class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight"><li class="md:skew-x-12 ">WRITEUPS</li></a>
-      <a href="contact.html" class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight"><li class="md:skew-x-12 ">CONTACT US</li></a>
+      <a href="index.html"
+        class="hidden md:inline px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight">
+        <li class="md:skew-x-12">~</li>
+      </a>
+      <a href="work.html"
+        class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight">
+        <li class="md:skew-x-12 ">OUR WORK</li>
+      </a>
+      <a href="events.html"
+        class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight">
+        <li class="md:skew-x-12 ">PAST EVENTS</li>
+      </a>
+      <a href="writeups.html"
+        class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight">
+        <li class="md:skew-x-12 ">WRITEUPS</li>
+      </a>
+      <a href="contact.html"
+        class="px-4 md:mx-1 py-1 text-center md:text-left md:my-2 bg-navButton md:hover:bg-navHover md:-skew-x-12 md:rounded-lg font-mono text-white hover:text-blueHighlight">
+        <li class="md:skew-x-12 ">CONTACT US</li>
+      </a>
       <!--TODO: Have home link be in center of navbar-->
       <!--flag{w0ah_n1c3_f1nd}-->
       <!--Social media links-->
-  
-  
-  
-  
+
       <!-- TODO: have link to embedded email? -->
-  
+
   </nav>
-  
+
   <img src="img/logo.png" class="hidden md:block self-center w-1/5 my-4">
 
   <div class="text-purple font-term self-center md:text-4xl text-xl mb-4">
-    >> <a href="https://uqcybersquad.getqpay.com" class="text-blueHighlight underline font-bold">BECOME A MEMBER</a> >> <a href="https://discord.gg/6TRbC7Y" class="text-blueHighlight underline font-bold">JOIN OUR DISCORD</a>
+    >> <a href="https://uqcybersquad.getqpay.com" class="text-blueHighlight underline font-bold">BECOME A MEMBER</a> >>
+    <a href="https://discord.gg/6TRbC7Y" class="text-blueHighlight underline font-bold">JOIN OUR DISCORD</a>
   </div>
 
-
-    <!-- TODO: Can we put a line break before each of the headers?? (see below) -->
-    <!-- TODO: Need to fix -> the cyrpto.js script is Deleting any styling (e.g. underlining, br's, and bolding)-->
-      <div class="bg-term w-3/4 self-center crypto text-white p-4 border-4 border-purple font-term">
-        <h3 class="term-text">Cyber Security is one of the most prominent threats facing our modern day society. From common-place phishing attacks to widespread data breaches, its effects are widespread and deeply impactful. It's important that there exist people to help combat this ever increasing threat.</h3>
-        <br><br>
-        <h2 class="term-header term-dot-slash">./</h2>
-        <h2 class="term-header-title"> PURPOSE</h2><hr class="padded-hr">
-        <h3 class="term-text term-tild">~$ </h3>
-        <h3 class="term-text">We are dedicated to building the best cyber security competition squad in the world... An elite band of hackers who can take on any challenge and effectively find, exploit and mitigate vulnerabilities in today's ever evolving cyber space.</h3>
-        <br><br>
-        <h2 class="term-header term-dot-slash">./</h2>
-        <h2 class="term-header-title"> SCHEDULE</h2><hr class="padded-hr">
-        <h3 class="term-text term-tild">~$ </h3>
-        <h3 class="term-text">We host weekly get togethers on <u>Wednesday nights</u> from 6.00pm in GP South, room 78-343. Come for technical talks, practice challenges, and a great community. On the Discord, you'll also find out our online backup plans if events get rained out or pandemicked out.</h3>
-        <br><br>
-        <h2 class="term-header term-dot-slash">./</h2>
-        <h2 class="term-header-title"> NEED TO KNOW?</h2><hr class="padded-hr">
-        <h3 class="term-text term-tild">~$ </h3>
-        <h3 class="term-text">Nothing! We have a range of experience levels, from the never-touched-a-terminal, to the OSCP qualified, and beyond. We learn together, practice together, and compete together - collaboration is key to growth.</h3>
-        <br><br>
-  <!--       <h2 class="term-header">MEMBERSHIP</h2><hr>
-        <h3 class="term-text term-tild">~$ </h3><h3 class="term-text">Membership is $5. For the events, all you need to bring is yourself, your laptop and charger. Maybe all your hacking gear too.</h3>
- -->
-        <h2 class="term-header term-dot-slash">./</h2>
-        <h2 class="term-header-title"> NEED TO BRING?</h2><hr class="padded-hr">
-        <h3 class="term-text term-tild">~$ </h3>
-        <h3 class="term-text">For the events, all you need to bring is yourself, your laptop and charger. Maybe all your hacking gear too, plus a couple USB sticks.</h3>
-        <br><br>
-
-        <h2 class="term-header term-dot-slash">./</h2>
-        <h2 class="term-header-title"> MEMBERSHIP?</h2><hr class="padded-hr">
-        <h3 class="term-text term-tild">~$ </h3>
-        <h3 class="term-text">Membership is only $2! Join us using the "become a member" link above.<h3>
-
-        <br>
-
-        <h2 class="term-header term-dot-slash">./</h2>
-        <h2 class="term-header-title"> WHAT'S A CTF?</h2><hr class="padded-hr">
-        <h3 class="term-text term-tild">~$ </h3>
-        <h3 class="term-text"><a target=_blank href=https://github.com/uqcybersquad/uqcyber-beginner-guide>Check out our Capture The Flag Beginner guide here!</a><h3>
-        
-        <br>  
-        
-
-      </div>
-
-      <div class="discord-qr">
-        <img src="img/csquad_discord.png" id="discord-qr">
-      </div>
-
-
-      <div id=socials>
-
-        <a href="https://linkedin.com/company/uq-cyber-squad" target="_blank"><img src="img/linkedin_logo.png" class="linkedin-logo"></a>
-
-        <a href="https://www.facebook.com/uqcybersquad/" target="_blank"><img src="img/fb_logo.png" class="fb-logo"></a>
-
-        <a href="https://github.com/uqcybersquad" target="_blank"><img src="img/github_logo.png" class="github-logo"></a>
-
-        <a href="https://discord.gg/6TRbC7Y" target="_blank"><img src="img/discord_logo.png" class="discord-logo"></a>
-
-      </div>
-
-
+  <!-- TODO: Can we put a line break before each of the headers?? (see below) -->
+  <!-- TODO: Need to fix -> the cyrpto.js script is Deleting any styling (e.g. underlining, br's, and bolding)-->
+  <div
+    class="bg-term w-4/5 self-center crypto text-white px-8 py-2 border-4 border-purple font-term text-lg leading-tight font-medium">
+    <p>Cyber Security is one of the most prominent threats facing our modern day society. From common-place phishing
+      attacks to widespread data breaches, its effects are widespread and deeply impactful. It's important that there
+      exist people to help combat this ever increasing threat.</p>
+    <p class="text-blueHighlight text-2xl font-bold py-4"><span class="text-purple">./</span> PURPOSE</p>
+    <p class="border-t-2"><span class="text-purple">~$ </span>We are dedicated to building the best cyber security
+      competition squad in the world... An elite band of hackers who can take on any challenge and effectively find,
+      exploit and mitigate vulnerabilities in today's ever evolving cyber space.</p>
+    <p class="text-blueHighlight text-2xl font-bold py-4"><span class="text-purple">./</span> SCHEDULE</p>
+    <p class="border-t-2"><span class="text-purple">~$ </span>We host weekly get togethers on <u>Wednesday nights</u>
+      from 6.00pm in GP South, room 78-343. Come for technical talks, practice challenges, and a great community. On the
+      Discord, you'll also find out our online backup plans if events get rained out or pandemicked out.</p>
+    <p class="text-blueHighlight text-2xl font-bold py-4"><span class="text-purple">./</span> NEED TO KNOW?</p>
+    <p class="border-t-2"><span class="text-purple">~$ </span>Nothing! We have a range of experience levels, from the
+      never-touched-a-terminal, to the OSCP qualified, and beyond. We learn together, practice together, and compete
+      together - collaboration is key to growth.</p>
+    <p class="text-blueHighlight text-2xl font-bold py-4"><span class="text-purple">./</span> NEED TO BRING?</p>
+    <p class="border-t-2"><span class="text-purple">~$ </span>For the events, all you need to bring is yourself, your
+      laptop and charger. Maybe all your hacking gear too, plus a couple USB sticks.</p>
+    <p class="text-blueHighlight text-2xl font-bold py-4"><span class="text-purple">./</span> MEMBERSHIP?</p>
+    <p class="border-t-2"><span class="text-purple">~$ </span>For the events, all you need to bring is yourself, your
+      laptop and charger. Maybe all your hacking gear too, plus a couple USB sticks.</p>
+    <p class="text-blueHighlight text-2xl font-bold py-4"><span class="text-purple">./</span> WHAT'S A CTF?</p>
+    <p class="border-t-2"><span class="text-purple">~$ </span><a class="text-blueHighlight underline" target=_blank
+        href=https://github.com/uqcybersquad/uqcyber-beginner-guide>Check out our Capture The Flag Beginner guide
+        here!</a></p>
+    <div class="flex flex-row">
+      <p class="my-2 mr-2">root@uqcs:~# </p><input class="flex-grow bg-term focus:outline-0">
     </div>
 
+  </div>
 
+  <div id=socials class="flex flex-row justify-center w-full my-4 gap-x-8">
 
+    <a href="https://linkedin.com/company/uq-cyber-squad" target="_blank" class="w-32"><img
+        src="img/linkedin_logo.png"></a>
 
+    <a href="https://www.facebook.com/uqcybersquad/" target="_blank" class="w-32"><img src="img/fb_logo.png"></a>
 
-<!-- <script src="js/crypto.js"></script> -->
+    <img src="img/csquad_discord.png" class="hidden md:block self-center w-32">
 
+    <a href="https://github.com/uqcybersquad" target="_blank" class="w-32"><img src="img/github_logo.png"></a>
+
+    <a href="https://discord.gg/6TRbC7Y" target="_blank" class="w-32"><img src="img/discord_logo.png"></a>
+
+  </div>
+
+  <!-- <script src="js/crypto.js"></script> -->
 
 </body>
-
-
-
-
 
 </html>
